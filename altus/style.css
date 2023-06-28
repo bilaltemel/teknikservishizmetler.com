@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&display=swap');
+
+*,*:hover,*:active {
+	outline:none;
+}
+.kayit-form {
+    background: #fff;
+    width: 100%;
+    margin: 0px auto;
+    padding: 30px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 7px 14px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 7px 14px 0px rgba(0, 0, 0, 0.5);
+}
+
+.kayit-form h2 {
+    margin: 20px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.form-group, .form-radio-group, .form-select-group {
+    width: calc(100% - 10px);
+    display: block;
+    margin: 5px;
+	color:#252525;
+}
+
+.form-select-group .form-group {
+	width: calc(50% - 5px);
+	float:left;
+	margin:0;
+	margin-bottom:5px;
+}
+
+.form-select-group .form-group:nth-child(1) {
+	margin-right:5px;
+}
+
+.form-select-group .form-group:nth-child(2) {
+	margin-left:5px;
+}
+
+.form-select-group .form-group select {
+    padding: 15px;
+    border: 1px solid #efefef;
+    width: 100%;
+    border-radius: 5px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.form-group label, .form-radio-group .title {
+	font-size:15px;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+	font-weight:bold;
+}
+
+.form-radio-group [type="radio"]:checked,
+.form-radio-group [type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.form-radio-group [type="radio"]:checked + label,
+.form-radio-group [type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 23px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #252525;
+  font-size: 15px;
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.form-radio-group [type="radio"]:checked + label:before,
+.form-radio-group [type="radio"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #f6f6f6;
+  border-radius: 100%;
+  background: #f6f6f6;
+}
+
+.form-radio-group [type="radio"]:checked + label:after,
+.form-radio-group [type="radio"]:not(:checked) + label:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #646363;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.form-radio-group [type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.form-radio-group [type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.form-group input, .form-group textarea {
+    padding: 15px;
+    border: 1px solid #efefef;
+    width: calc(100% - 30px);
+	max-width:calc(100% - 30px);
+    border-radius: 5px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.kayit-form form button {
+	border: unset;
+    padding: 15px 0;
+    width: calc(100% - 10px);
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffff;
+    border-radius: 5px;
+    margin: 5px;
+    background: #252525;
+    cursor: pointer;
+}
+
+.alert {
+	font-size: 1.5vw;
+    padding: 1vw 1.5vw;
+    background: #252525;
+    display: table;
+    color: #fff;
+    margin: 1vw auto;
+    border-radius: 5vw !important;
+    -webkit-box-shadow: 0px 2.4vw 0.75vw -2vw rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2.4vw 0.75vw -2vw rgba(0,0,0,0.5);
+    box-shadow: 0px 2.4vw 0.75vw -2vw rgba(0,0,0,0.5);
+}
+
+#uyari_box {
+	position:fixed !important;
+	z-index:999999999;
+	top: 50% !important;
+    left: 50%;
+	width:max-content;
+    transform: translate(-50%, -50%);
+	border: 0.25vw solid #fff;
+	text-align: center;
+}
+
+@media (max-width: 991px) { 
+	.alert {
+		font-size: 4.5vw;
+		padding: 3vw 5.5vw;
+	}
+	
+	.kayit-form {
+		width:90%;
+		font-size:50px;
+	}
+	
+	.kayit-form h2 {
+		margin-bottom:40px;
+		font-size:24px;
+	}
+	
+	.form-group label, .form-radio-group .title {
+		font-size:16px;
+	}
+	
+	.form-group input, .form-group textarea, .kayit-form form button {
+		padding: 16px;
+		font-size: 16px;
+		width: calc(100% - 60px);
+		max-width: calc(100% - 60px);
+	}
+	
+	.form-group, .form-radio-group, .form-select-group {
+		margin: 20px 5px;
+	}
+	
+	.form-radio-group [type="radio"]:checked + label, .form-radio-group [type="radio"]:not(:checked) + label {
+		font-size: 16px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		padding-left:40px;
+		line-height: 35px;
+	}
+	
+	.form-radio-group [type="radio"]:checked + label:before, .form-radio-group [type="radio"]:not(:checked) + label:before {
+		width:30px;
+		height:30px;
+	}
+	
+	.form-radio-group [type="radio"]:checked + label:after, .form-radio-group [type="radio"]:not(:checked) + label:after {
+		width: 20px;
+		height: 20px;
+		top: 6px;
+		left: 6px;
+	}
+	
+	.form-select-group .form-group {
+		width:calc(100% - 10px);
+		margin: 20px 5px;
+		margin-right:5px;
+		margin-left:5px;
+	}
+	
+	.form-select-group .form-group select {
+		padding:30px;
+		font-size: 16px;
+	}
+}
